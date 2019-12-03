@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Messages } from './components/Messages/Messages';
+import TopBarProgress from 'react-topbar-progress-indicator';
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([]);
@@ -21,13 +22,24 @@ export const App = () => {
     });
   }, []);
 
-  thoughts.forEach(item => {
-    console.log(item);
+  TopBarProgress.config({
+    barColors: {
+      '0': '#ff0000',
+      '1.0': '#ff0000'
+    },
+    shadowBlur: 5,
+    barThickness: 1
   });
 
   return (
     <div className="app-container">
-      {isLoading ? <div>Loading...</div> : <Messages data={thoughts} />}
+      {isLoading ? (
+        <div>
+          <TopBarProgress />
+        </div>
+      ) : (
+        <Messages data={thoughts} />
+      )}
     </div>
   );
 };
