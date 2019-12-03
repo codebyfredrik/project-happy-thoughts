@@ -43,15 +43,6 @@ li {
   transition: all .2s ease-in-out;
 }
 
-.heartCircle:hover {
-  background: rgba(255, 0, 0, 0.3);
-  transform: scale(1.2);
-}
-
-.heartCircle:active {
-  background: rgba(0, 128, 0, 0.3);
-}
-
 .heartCount {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
@@ -70,4 +61,15 @@ i {
   /* border: 1px solid green; */
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5)
+}
+
+@media(hover: hover) and (pointer: fine) {
+  .heartCircle:hover {
+    background: rgba(255, 0, 0, 0.3);
+    transform: scale(1.2);
+  }
+  
+  .heartCircle:active {
+    background: rgba(0, 128, 0, 0.3);
+  }
 }
