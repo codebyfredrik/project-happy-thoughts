@@ -1,0 +1,68 @@
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 140px;
+  border: 1px solid black;
+  margin-bottom: 35px;
+  padding: 20px;
+  box-shadow: 5px 5px 0px 0 black;
+}
+
+.cardMessage {
+  font-weight: 600;
+  line-height: 20px;
+  /* border: 1px solid red; */
+}
+
+.cardInfo {
+  /* height: 50%; */
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+  margin-top: 10px;
+}
+
+.hearts {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid turquoise; */
+  width: 50%;
+}
+
+.heartCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background: rgba(0, 0, 0, 0.07);
+  transition: all .2s ease;
+}
+
+.heartCircle:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.heartCount {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+i {
+  font-size: 14px;
+  color: red;
+}
+
+.timeStamp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  /* border: 1px solid green; */
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5)
+}
