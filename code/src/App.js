@@ -28,7 +28,7 @@ export const App = () => {
       '1.0': '#ff0000'
     },
     shadowBlur: 5,
-    barThickness: 1
+    barThickness: 2
   });
 
   return (
