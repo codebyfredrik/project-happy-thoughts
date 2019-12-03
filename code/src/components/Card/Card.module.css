@@ -48,6 +48,10 @@ li {
   transform: scale(1.2);
 }
 
+.heartCircle:active {
+  background: rgba(0, 128, 0, 0.3);
+}
+
 .heartCount {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
