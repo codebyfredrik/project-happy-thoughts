@@ -40,11 +40,12 @@ li {
   width: 35px;
   height: 35px;
   background: rgba(0, 0, 0, 0.07);
-  transition: all .2s ease;
+  transition: all .2s ease-in-out;
 }
 
 .heartCircle:hover {
   background: rgba(255, 0, 0, 0.3);
+  transform: scale(1.2);
 }
 
 .heartCount {
