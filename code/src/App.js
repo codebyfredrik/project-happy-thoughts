@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Messages } from './components/Messages/Messages';
+import { Form } from './components/Form/Form';
 import TopBarProgress from 'react-topbar-progress-indicator';
 
 export const App = () => {
@@ -31,6 +32,10 @@ export const App = () => {
     barThickness: 2
   });
 
+  const handleSubmit = e => {
+    console.log('Handle submit');
+  };
+
   return (
     <div className="app-container">
       {isLoading ? (
@@ -38,7 +43,10 @@ export const App = () => {
           <TopBarProgress />
         </div>
       ) : (
-        <Messages data={thoughts} />
+        <div>
+          <Form handleSubmit={handleSubmit} />
+          <Messages data={thoughts} />
+        </div>
       )}
     </div>
   );
