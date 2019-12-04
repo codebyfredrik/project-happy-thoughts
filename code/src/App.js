@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { fetchData } from '../src/api/Api';
 import { Messages } from './components/Messages/Messages';
 import { Form } from './components/Form/Form';
 import TopBarProgress from 'react-topbar-progress-indicator';
@@ -8,15 +9,7 @@ export const App = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-
-      const response = await fetch('https://technigo-thoughts.herokuapp.com/');
-      const data = await response.json();
-
-      return data;
-    };
-
+    setIsLoading(true);
     fetchData().then(data => {
       setThoughts(data);
       setIsLoading(false);
@@ -32,8 +25,24 @@ export const App = () => {
     barThickness: 2
   });
 
-  const handleSubmit = e => {
-    console.log('Handle submit');
+  const onSubmit = input => {
+    const postData = async () => {
+      // setIsLoading(true);
+
+      const request = await fetch('https://technigo-thoughts.herokuapp.com/', {
+        method: 'POST',
+        body: JSON.stringify({ message: input }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+      const data = await request.json();
+
+      return data;
+    };
+
+    postData().then(newThought => {
+      console.log(newThought);
+      setThoughts(previousThoughts => [newThought, ...previousThoughts]);
+    });
   };
 
   return (
@@ -44,7 +53,7 @@ export const App = () => {
         </div>
       ) : (
         <div>
-          <Form handleSubmit={handleSubmit} />
+          <Form onSubmit={onSubmit} />
           <Messages data={thoughts} />
         </div>
       )}
