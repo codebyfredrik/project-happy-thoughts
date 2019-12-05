@@ -51,7 +51,7 @@ button[type=submit] {
 
   &:disabled {
     opacity: 0.3;
-    cursor: none;
+    cursor: not-allowed;
   }
 }
 
