@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Form.module.scss';
+import heart from '../../assets/heart.png';
 
 let classNames = require('classnames');
 
@@ -61,9 +62,11 @@ export const Form = ({ onSubmit }) => {
         </div>
         <div>
           <button type="submit" disabled={error}>
-            <i className="fas fa-heart"></i>
+            {/* <i className="fas fa-heart"></i> */}
+            <img className={styles.heart} src={heart} />
             <span>Send Happy Thought</span>
-            <i className="fas fa-heart"></i>
+            {/* <i className="fas fa-heart"></i> */}
+            <img className={styles.heart} src={heart} />
           </button>
         </div>
       </form>

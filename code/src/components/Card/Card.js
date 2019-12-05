@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Card.module.scss';
+import heart from '../../assets/heart.png';
 
 const moment = require('moment');
 
@@ -11,7 +12,8 @@ export const Card = ({ data, handleClick }) => {
       <div className={styles.cardInfo}>
         <div className={styles.hearts}>
           <span className={styles.heartCircle} onClick={() => handleClick(id)}>
-            <i className="fas fa-heart"></i>
+            {/* <i className="fas fa-heart"></i> */}
+            <img className={styles.heart} src={heart} />
           </span>
           <span className={styles.heartCount}>x {data.hearts}</span>
         </div>
