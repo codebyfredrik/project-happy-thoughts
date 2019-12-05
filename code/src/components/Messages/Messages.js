@@ -3,11 +3,10 @@ import { postLike } from '../../api/Api';
 import { Card } from '../Card/Card';
 import styles from './Messages.module.css';
 
-export const Messages = ({ data }) => {
+export const Messages = ({ data, updateLikes }) => {
   const handleClick = id => {
-    // console.log(id);
     postLike(id).then(data => {
-      console.log(data);
+      updateLikes(data);
     });
   };
 

@@ -45,6 +45,20 @@ export const App = () => {
     });
   };
 
+  const updateLikes = thought => {
+    // console.log(thought);
+
+    const tempThoughts = thoughts.map(item => {
+      if (item._id === thought._id) {
+        return { ...thought };
+      } else {
+        return item;
+      }
+    });
+
+    setThoughts([...tempThoughts]);
+  };
+
   return (
     <div className="app-container">
       {isLoading ? (
@@ -54,7 +68,7 @@ export const App = () => {
       ) : (
         <div>
           <Form onSubmit={onSubmit} />
-          <Messages data={thoughts} />
+          <Messages data={thoughts} updateLikes={updateLikes} />
         </div>
       )}
     </div>
