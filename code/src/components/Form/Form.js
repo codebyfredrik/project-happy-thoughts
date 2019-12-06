@@ -7,7 +7,8 @@ import heart from '../../assets/heart.png';
 export const Form = ({ onSubmit }) => {
   const [thought, setThought] = useState('');
   const [count, setCount] = useState(0);
-  const [error, setError] = useState(true);
+  const [error, setError] = useState('');
+  const [enableSubmit, setEnableSubmit] = useState(false);
 
   const MAX_INPUT = 140;
   const MIN_INPUT = 5;
@@ -17,7 +18,8 @@ export const Form = ({ onSubmit }) => {
     onSubmit(thought.trim());
     setThought('');
     setCount(0);
-    setError(true);
+    setError('');
+    setEnableSubmit(false);
   };
 
   const handleInputChange = e => {
@@ -29,9 +31,11 @@ export const Form = ({ onSubmit }) => {
     } else {
       if (target.type === 'textarea' && target.value.length < MIN_INPUT) {
         // Error message logged to the console when changing state
-        setError(true);
+        setError('error');
+        setEnableSubmit(false);
       } else {
-        setError(false);
+        setError('valid');
+        setEnableSubmit(true);
       }
 
       // Updating state with character count
@@ -53,15 +57,16 @@ export const Form = ({ onSubmit }) => {
             onChange={handleInputChange}
           />
           <div className={styles.inputSubDetails}>
-            {error ? (
-              <p className={styles.counterError}>{count}/140</p>
-            ) : (
+            {!error ? (
               <p className={styles.counter}>{count}/140</p>
+            ) : (
+              <p className={styles[error]}>{count}/140</p>
             )}
+            {/* <p className={styles.counter}>{count}/140</p> */}
           </div>
         </div>
         <div>
-          <button type="submit" disabled={error}>
+          <button type="submit" disabled={!enableSubmit}>
             {/* <i className="fas fa-heart"></i> */}
             <img className={styles.heart} src={heart} alt="heart" />
             <span>Send Happy Thought</span>
