@@ -13,7 +13,7 @@ export const Card = ({ data, handleClick }) => {
         <div className={styles.hearts}>
           <span className={styles.heartCircle} onClick={() => handleClick(id)}>
             {/* <i className="fas fa-heart"></i> */}
-            <img className={styles.heart} src={heart} />
+            <img className={styles.heart} src={heart} alt="heart" />
           </span>
           <span className={styles.heartCount}>x {data.hearts}</span>
         </div>
