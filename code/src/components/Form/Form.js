@@ -52,6 +52,7 @@ export const Form = ({ onSubmit }) => {
         <div>
           <label>What's making you happy right now?</label>
           <textarea
+            className={styles.message}
             name="thought"
             value={thought}
             onChange={handleInputChange}
