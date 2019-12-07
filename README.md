@@ -21,4 +21,4 @@ URL to live site: https://confident-engelbart-e0a558.netlify.com/
 
 ### APIs used
 
-- Technigo API
+- Technigo API  
