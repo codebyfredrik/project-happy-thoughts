@@ -1,19 +1,24 @@
-# Technigo React Starter App
+# Project 6 - Message web application (Week 11)
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+### Summary
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+In this weekly assigment (@ Technigo Boot Camp 2019) I was given the task to create a messaging web app, like Twitter, built around a custom made Technigo API.
 
-## Usage
+URL to live site: https://confident-engelbart-e0a558.netlify.com/
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+### Learning objectives
 
-Alternatively, if you don't want a new git repo on your account;
+- Component lifecycle.
+- How to use the useEffect hook in React to perform actions when components mount, unmount, or when state changes.
+- How to call APIs from React and put the data into state.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+### Technologies used
+
+- HTML
+- CSS
+- Javascript
+- React
+
+### APIs used
+
+- Technigo API
