@@ -46,8 +46,6 @@ export const App = () => {
   };
 
   const updateLikes = thought => {
-    // console.log(thought);
-
     const tempThoughts = thoughts.map(item => {
       if (item._id === thought._id) {
         return { ...thought };
