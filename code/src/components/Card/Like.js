@@ -6,9 +6,10 @@ export const Like = ({ spinnerActive, hearts, id, handleClick }) => {
   return (
     <div className={styles.hearts}>
       <span
+        tabindex="0"
+        role="button"
         className={styles.heartCircle}
         onClick={() => handleClick(id)}
-        role="button"
       >
         <i className="fas fa-heart"></i>
       </span>
