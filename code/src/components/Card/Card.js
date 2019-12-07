@@ -31,7 +31,7 @@ export const Card = ({ data, handleClick, isLiking }) => {
             )}
           </span>
         </div>
-        <div className={styles.timeStamp}>
+        <div className={styles.timestamp}>
           <span>{moment(data.createdAt).fromNow()}</span>
         </div>
       </div>

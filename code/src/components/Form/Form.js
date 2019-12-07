@@ -68,11 +68,11 @@ export const Form = ({ onSubmit }) => {
         </div>
         <div>
           <button type="submit" disabled={!enableSubmit}>
-            {/* <i className="fas fa-heart"></i> */}
-            <img className={styles.heart} src={heart} alt="heart" />
+            <i className="fas fa-heart"></i>
+            {/* <img className={styles.heart} src={heart} alt="heart" /> */}
             <span>Send Happy Thought</span>
-            {/* <i className="fas fa-heart"></i> */}
-            <img className={styles.heart} src={heart} alt="heart" />
+            <i className="fas fa-heart"></i>
+            {/* <img className={styles.heart} src={heart} alt="heart" /> */}
           </button>
         </div>
       </form>
