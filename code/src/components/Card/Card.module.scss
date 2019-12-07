@@ -25,6 +25,7 @@ li {
 .hearts {
   display: flex;
   align-items: center;
+  // border: 1px solid blue;
   width: 50%;
 }
 
@@ -53,9 +54,20 @@ li {
   }
 }
 
+.heartSeparator {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  // border: 1px solid green;
+  margin-left: 14px; 
+  padding: 0;
+}
+
 .heartCount {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
+  // border: 1px solid blue;
+  margin: 0px; 
+  padding: 0;
 }
 
 i {
@@ -78,6 +90,12 @@ i {
   margin: 0;
 }
 
-// .heart {
-//   width: 15px;
-// }
+.heart {
+  width: 15px;
+}
+
+.spinner {
+  margin-left: -8px;
+  margin-top: 2px;
+  padding: 0;
+}
