@@ -1,4 +1,4 @@
-# Project 6 - Message web application (Week 11)
+# Project 11 - Message web application (Week 11)
 
 ### Summary
 
