@@ -7,20 +7,21 @@ export const Messages = ({ data, updateLikes }) => {
   const [isLiking, setIsLiking] = useState([]);
 
   const handleClick = id => {
-    // console.log('Before', isLiking);
     setIsLiking(prevState => [...prevState, id]);
-    // console.log('After', isLiking);
     postLike(id)
       .then(data => {
         updateLikes(data);
+        return data;
       })
-      .then(() => {
+      .then(message => {
+        // console.log(message);
+        // console.log(message._id);
         // Removing message ID from state array when like count is updated
         const tempLiking = isLiking.map(item => {
-          return item !== id;
+          return item !== message._id;
         });
         setIsLiking([...tempLiking]);
-        console.log('Like updated:', id);
+        // console.log('Like updated:', id);
       });
   };
 
