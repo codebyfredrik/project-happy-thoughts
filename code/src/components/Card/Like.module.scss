@@ -1,0 +1,58 @@
+.hearts {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.heartCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: all .2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 6px rgba(255, 0, 0, 0.5);
+    border: 1px solid rgba(255, 0, 0, 0.7);
+  }
+
+  &:active {
+    background: rgba(255, 0, 0, 0.3);
+  }
+}
+
+.heartSeparator {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 14px; 
+  padding: 0;
+}
+
+.heartCount {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0px; 
+  padding: 0;
+}
+
+.heart {
+  width: 15px;
+}
+
+.spinner {
+  margin-left: -8px;
+  margin-top: 2px;
+  padding: 0;
+}
+
+i {
+  font-size: 14px;
+  color: red;
+}

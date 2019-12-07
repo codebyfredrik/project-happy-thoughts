@@ -1,0 +1,14 @@
+.timestamp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.timestamp span {
+  margin: 0;
+}
