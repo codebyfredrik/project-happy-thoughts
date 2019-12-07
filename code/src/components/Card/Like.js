@@ -5,13 +5,9 @@ import spinner from '../../assets/spinner2.svg';
 export const Like = ({ spinnerActive, hearts, id, handleClick }) => {
   return (
     <div className={styles.hearts}>
-      <span
-        className={styles.heartCircle}
-        onClick={() => handleClick(id)}
-        role="button"
-      >
+      <button className={styles.heartCircle} onClick={() => handleClick(id)}>
         <i className="fas fa-heart"></i>
-      </span>
+      </button>
       <span className={styles.heartSeparator}>x</span>
       <span className={styles.heartCount}>
         {spinnerActive ? (
