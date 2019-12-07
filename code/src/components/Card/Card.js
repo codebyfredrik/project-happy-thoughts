@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Card.module.scss';
 import heart from '../../assets/heart.png';
+import spinner from '../../assets/spinner.svg';
 
 const moment = require('moment');
 
@@ -12,12 +13,12 @@ export const Card = ({ data, handleClick }) => {
       <div className={styles.cardInfo}>
         <div className={styles.hearts}>
           <span className={styles.heartCircle} onClick={() => handleClick(id)}>
-            {/* <i className="fas fa-heart"></i> */}
-            <img className={styles.heart} src={heart} alt="heart" />
+            <i className="fas fa-heart"></i>
           </span>
           <span className={styles.heartCount}>x {data.hearts}</span>
+          {/* <img src={spinner} alt="loading spinner" /> */}
         </div>
-        <div className={styles.timeStamp}>
+        <div className={styles.timestamp}>
           <span>{moment(data.createdAt).fromNow()}</span>
         </div>
       </div>
