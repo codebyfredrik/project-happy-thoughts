@@ -2,7 +2,7 @@
 
 ### Summary
 
-In this weekly assigment (@ Technigo Boot Camp 2019) I was given the task to create a messaging web app, like Twitter, built around a custom made Technigo API.
+In this weekly assigment (@ Technigo Boot Camp 2019) I was given the task to create a web app that presents messages, much like Twitter.
 
 URL to live site: https://confident-engelbart-e0a558.netlify.com/
 
@@ -21,4 +21,4 @@ URL to live site: https://confident-engelbart-e0a558.netlify.com/
 
 ### APIs used
 
-- Technigo API  
+- Custom made Technigo API  
