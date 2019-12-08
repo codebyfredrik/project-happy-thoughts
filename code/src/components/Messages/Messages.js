@@ -14,14 +14,11 @@ export const Messages = ({ data, updateLikes }) => {
         return data;
       })
       .then(message => {
-        // console.log(message);
-        // console.log(message._id);
         // Removing message ID from state array when like count is updated
         const tempLiking = isLiking.map(item => {
           return item !== message._id;
         });
         setIsLiking([...tempLiking]);
-        // console.log('Like updated:', id);
       });
   };
 

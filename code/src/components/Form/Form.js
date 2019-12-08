@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import styles from './Form.module.scss';
-import heart from '../../assets/heart.png';
-
-// let classNames = require('classnames');
 
 export const Form = ({ onSubmit }) => {
   const [thought, setThought] = useState('');
@@ -63,7 +60,6 @@ export const Form = ({ onSubmit }) => {
             ) : (
               <p className={styles[error]}>{count}/140</p>
             )}
-            {/* <p className={styles.counter}>{count}/140</p> */}
           </div>
         </div>
         <div>

@@ -35,7 +35,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: lightgrey; */
   font-family: 'Inconsolata', monospace;
 }
 
@@ -47,5 +46,4 @@ body {
   max-width: 400px;
   margin: 0 auto;
   padding: 0 25px;
-  /* border: 5px solid green;  */
 }

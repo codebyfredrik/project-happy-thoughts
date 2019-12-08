@@ -27,8 +27,6 @@ export const App = () => {
 
   const onSubmit = input => {
     const postData = async () => {
-      // setIsLoading(true);
-
       const request = await fetch('https://technigo-thoughts.herokuapp.com/', {
         method: 'POST',
         body: JSON.stringify({ message: input }),
@@ -40,7 +38,6 @@ export const App = () => {
     };
 
     postData().then(newThought => {
-      console.log(newThought);
       setThoughts(previousThoughts => [newThought, ...previousThoughts]);
     });
   };

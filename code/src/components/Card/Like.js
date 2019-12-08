@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Like.module.scss';
-import spinner from '../../assets/spinner2.svg';
+import spinner from '../../assets/spinner.svg';
 
 export const Like = ({ spinnerActive, hearts, id, handleClick }) => {
   return (
