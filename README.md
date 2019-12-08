@@ -1,24 +1,30 @@
-# Project 11 - Message web application (Week 11)
+# Project 11 - Message site (Week 11)
 
-### Summary
+### 1. What is this?
 
-In this weekly assigment (@ Technigo Boot Camp 2019) I was given the task to create a web app that presents messages, much like Twitter.
+A message site created with React that displays short Twitter like messages from users. The site is integrated with a custom made Technigo API.
 
-URL to live site: https://confident-engelbart-e0a558.netlify.com/
+### 2. What did I do?
 
-### Learning objectives
+[TEXT]
 
-- Component lifecycle.
-- How to use the useEffect hook in React to perform actions when components mount, unmount, or when state changes.
-- How to call APIs from React and put the data into state.
-
-### Technologies used
+### 3. Technologies used
 
 - HTML
 - CSS
 - Javascript
 - React
 
-### APIs used
+### 4. APIs used
 
-- Custom made Technigo API  
+- Custom made Technigo API
+
+### 5. Learning objectives
+
+- Component lifecycle.
+- How to use the useEffect hook in React to perform actions when components mount, unmount, or when state changes.
+- How to call APIs from React and put the data into state.
+
+### 6. Where can you see it in action?
+
+URL to live site: https://confident-engelbart-e0a558.netlify.com/
