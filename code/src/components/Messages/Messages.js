@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { postLike } from '../../api/Api';
+import * as API from '../../api/Api';
 import { Card } from '../Card/Card';
 import styles from './Messages.module.css';
 
@@ -8,7 +8,7 @@ export const Messages = ({ data, updateLikes }) => {
 
   const handleClick = id => {
     setIsLiking(prevState => [...prevState, id]);
-    postLike(id)
+    API.postLike(id)
       .then(data => {
         updateLikes(data);
         return data;

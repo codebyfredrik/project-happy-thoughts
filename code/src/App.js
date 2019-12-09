@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchData } from '../src/api/Api';
+import * as API from '../src/api/Api';
 import { Messages } from './components/Messages/Messages';
 import { Form } from './components/Form/Form';
 import TopBarProgress from 'react-topbar-progress-indicator';
@@ -10,7 +10,7 @@ export const App = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetchData().then(data => {
+    API.fetchData().then(data => {
       setThoughts(data);
       setIsLoading(false);
     });

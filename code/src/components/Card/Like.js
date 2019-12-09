@@ -11,7 +11,7 @@ export const Like = ({ spinnerActive, hearts, id, handleClick }) => {
       <span className={styles.heartSeparator}>x</span>
       <span className={styles.heartCount}>
         {spinnerActive ? (
-          <img className={styles.spinner} src={spinner} />
+          <img className={styles.spinner} src={spinner} alt="spinner" />
         ) : (
           hearts
         )}
