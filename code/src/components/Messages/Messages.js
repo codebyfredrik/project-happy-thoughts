@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as API from '../../api/Api';
 import { Card } from '../Card/Card';
-import styles from './Messages.module.css';
+import './Messages.module.scss';
 
 export const Messages = ({ data, updateLikes }) => {
   const [isLiking, setIsLiking] = useState([]);
