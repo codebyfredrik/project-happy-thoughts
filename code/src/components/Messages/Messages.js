@@ -18,28 +18,36 @@ export const Messages = ({ data, updateLikes }) => {
         })
       );
       setIsLiking({ ...newState });
+      // console.log('Second', isLiking);
       // console.log('Key in object');
     } else {
-      // console.log('Key not in object');
+      console.log('Key not in object');
+      // console.log(([id]: 1));
       setIsLiking({ ...isLiking, [id]: 1 });
+      // console.log('First', isLiking);
     }
 
     API.postLike(id)
       .then(data => {
+        // console.log(isLiking);
         updateLikes(data);
         return data;
       })
       .then(message => {
         console.log(message._id);
+        // console.log(isLiking);
+        // console.log(isLiking.hasOwnProperty(message._id));
         if (isLiking.hasOwnProperty(message._id)) {
+          console.log('true');
           let newStateTemp = Object.fromEntries(
             Object.entries(isLiking)
               .map(([key, value]) => {
-                if (key === message._id && value > 0) {
+                console.log(key);
+                if (key === message._id) {
                   console.log('remove 1 from value:', value);
                   return [key, value - 1];
                 } else {
-                  console.log('returning element');
+                  // console.log('returning element');
                   return [key, value];
                 }
               })
