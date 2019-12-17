@@ -5,7 +5,7 @@ import './Messages.module.scss';
 
 export const Messages = ({ data, updateLikes }) => {
   const [isLiking, setIsLiking] = useState([]);
-
+  //test
   const handleClick = id => {
     setIsLiking(prevState => [...prevState, id]);
     API.postLike(id)
