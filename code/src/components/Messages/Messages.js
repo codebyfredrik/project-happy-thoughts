@@ -5,11 +5,10 @@ import './Messages.module.scss';
 
 export const Messages = ({ data, updateLikes }) => {
   const [isLiking, setIsLiking] = useState({});
-  let newState = {};
 
   const handleClick = id => {
     if (isLiking.hasOwnProperty(id)) {
-      newState = Object.fromEntries(
+      let newState = Object.fromEntries(
         Object.entries(isLiking).map(([key, value]) => {
           if (key === id) {
             return [key, value + 1];
@@ -19,13 +18,11 @@ export const Messages = ({ data, updateLikes }) => {
         })
       );
       setIsLiking({ ...newState });
-      console.log('Key in object');
+      // console.log('Key in object');
     } else {
-      console.log('Key not in object');
+      // console.log('Key not in object');
       setIsLiking({ ...isLiking, [id]: 1 });
     }
-
-    // console.log(newState);
 
     API.postLike(id)
       .then(data => {
@@ -33,11 +30,25 @@ export const Messages = ({ data, updateLikes }) => {
         return data;
       })
       .then(message => {
-        // Removing message ID from state array when like count is updated
-        // const tempLiking = isLiking.map(item => {
-        //   return item !== message._id;
-        // });
-        // setIsLiking([...tempLiking]);
+        console.log(message._id);
+        if (isLiking.hasOwnProperty(message._id)) {
+          let newStateTemp = Object.fromEntries(
+            Object.entries(isLiking)
+              .map(([key, value]) => {
+                if (key === message._id && value > 0) {
+                  console.log('remove 1 from value:', value);
+                  return [key, value - 1];
+                } else {
+                  console.log('returning element');
+                  return [key, value];
+                }
+              })
+              .filter(([key, value]) => {
+                return value > 0;
+              })
+          );
+          setIsLiking({ ...newStateTemp });
+        }
       });
   };
 
