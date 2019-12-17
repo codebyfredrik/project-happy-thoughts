@@ -6,7 +6,8 @@ import styles from './Card.module.scss';
 
 export const Card = ({ data, handleClick, isLiking }) => {
   const { _id: id } = data;
-  const spinnerActive = isLiking.includes(id);
+  // const spinnerActive = isLiking.includes(id);
+  const spinnerActive = false;
 
   return (
     <li>
