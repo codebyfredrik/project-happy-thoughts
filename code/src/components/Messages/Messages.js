@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as API from '../../api/Api';
 import { Card } from '../Card/Card';
 import './Messages.module.scss';
 
 export const Messages = ({ data, updateLikes }) => {
   const [isLiking, setIsLiking] = useState({});
+
+  useEffect(() => {
+    console.log('isLiking updated: ', isLiking);
+  }, [isLiking]);
 
   const handleClick = id => {
     if (isLiking.hasOwnProperty(id)) {
@@ -17,11 +21,11 @@ export const Messages = ({ data, updateLikes }) => {
           }
         })
       );
-      setIsLiking({ ...newState });
+      setIsLiking(newState);
       // console.log('Second', isLiking);
       // console.log('Key in object');
     } else {
-      console.log('Key not in object');
+      // console.log('Key not in object');
       // console.log(([id]: 1));
       setIsLiking({ ...isLiking, [id]: 1 });
       // console.log('First', isLiking);
@@ -34,17 +38,17 @@ export const Messages = ({ data, updateLikes }) => {
         return data;
       })
       .then(message => {
-        console.log(message._id);
+        // console.log('MessageID:', message._id);
         // console.log(isLiking);
-        // console.log(isLiking.hasOwnProperty(message._id));
+        console.log(isLiking.hasOwnProperty(message._id));
         if (isLiking.hasOwnProperty(message._id)) {
           console.log('true');
           let newStateTemp = Object.fromEntries(
             Object.entries(isLiking)
               .map(([key, value]) => {
-                console.log(key);
-                if (key === message._id) {
-                  console.log('remove 1 from value:', value);
+                // console.log(key);
+                if (key === message._id && value >= 1) {
+                  // console.log('remove 1 from value:', value);
                   return [key, value - 1];
                 } else {
                   // console.log('returning element');
@@ -55,7 +59,7 @@ export const Messages = ({ data, updateLikes }) => {
                 return value > 0;
               })
           );
-          setIsLiking({ ...newStateTemp });
+          setIsLiking(newStateTemp);
         }
       });
   };
