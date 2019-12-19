@@ -1,4 +1,4 @@
-# Project 11 - A message site
+# Project 11 - Message site
 
 ### Summary
 
