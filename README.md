@@ -1,10 +1,10 @@
 # Project 11 - Message site
 
-### What is this?
+### Summary
 
 A message site created with React that displays short Twitter like messages from users. The site is integrated with a custom made Technigo API.
 
-### What did I do? (or "Implementation details"?)
+### Implementation details
 
 It was fun a project to work on and I got the chance to try scoped CSS (with SASS) for the first time. It worked out really well.
 
