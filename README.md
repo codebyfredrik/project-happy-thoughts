@@ -1,4 +1,4 @@
-# Project 11 - Message site (Week 11)
+# Project 11 - Message site
 
 ### 1. What is this?
 
