@@ -1,10 +1,10 @@
 # Project 11 - Message site
 
-### 1. What is this?
+### What is this?
 
 A message site created with React that displays short Twitter like messages from users. The site is integrated with a custom made Technigo API.
 
-### 2. What did I do?
+### What did I do?
 
 It was fun a project to work on and I got the chance to try scoped CSS (with SASS) for the first time. It worked out really well.
 
@@ -14,23 +14,23 @@ I also implemented a spinner (easy to see when using simulated slow 3G in devtoo
 
 A progress bar at the very top of the page has also been implemented.
 
-### 3. Technologies used
+### Technologies used
 
 - HTML
 - CSS
 - Javascript
 - React
 
-### 4. APIs used
+### APIs used
 
 - Custom made Technigo API
 
-### 5. Learning objectives
+### Learning objectives
 
 - Component lifecycle.
 - How to use the useEffect hook in React to perform actions when components mount, unmount, or when state changes.
 - How to call APIs from React and put the data into state.
 
-### 6. Where can you see it in action?
+### Where can you see it in action?
 
 URL to live site: https://confident-engelbart-e0a558.netlify.com/
