@@ -6,7 +6,7 @@ A message site created with React that displays short Twitter like messages from
 
 ### Implementation details
 
-It was fun a project to work on and I got the chance to try scoped CSS (with SASS) for the first time. It worked out really well.
+It was fun a project to work on and I got the chance to try scoped CSS (with SCSS) for the first time. It worked out really well.
 
 When liking a message I decided to update the state with the message that comes in return when sending the request. By doing this I can display the most current number of likes for a particular message at the same time.
 
