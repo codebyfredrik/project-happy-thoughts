@@ -1,4 +1,4 @@
-# Project 11 - Message site
+# Message site
 
 ### Summary
 
@@ -24,12 +24,6 @@ A progress bar at the very top of the page has also been implemented.
 ### APIs used
 
 - Custom made Technigo API
-
-### Learning objectives
-
-- Component lifecycle.
-- How to use the useEffect hook in React to perform actions when components mount, unmount, or when state changes.
-- How to call APIs from React and put the data into state.
 
 ### Where can you see it in action?
 
