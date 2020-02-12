@@ -7,6 +7,7 @@ import TopBarProgress from 'react-topbar-progress-indicator';
 export const App = () => {
   const [thoughts, setThoughts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const baseURL = `https://express-happy-thoughts-api.herokuapp.com/api`;
 
   useEffect(() => {
     setIsLoading(true);
@@ -27,7 +28,7 @@ export const App = () => {
 
   const onSubmit = input => {
     const postData = async () => {
-      const request = await fetch('https://technigo-thoughts.herokuapp.com/', {
+      const request = await fetch(baseURL, {
         method: 'POST',
         body: JSON.stringify({ message: input }),
         headers: { 'Content-Type': 'application/json' }
